@@ -1,0 +1,20 @@
+const { injectBabelPlugin } = require('react-app-rewired');
+const rewireLess = require('react-app-rewire-less');
+const {rewireWorkboxInject, defaultInjectConfig} = require('react-app-rewire-workbox');
+const path = require('path');
+module.exports = function override(config, env) {
+  if (env === "production") {
+    console.log("Production build - Adding Workbox for PWAs");
+    // Extend the default injection config with required swSrc
+    const workboxConfig = {
+      ...defaultInjectConfig,
+      swSrc: path.join(__dirname, 'src', 'cw-serviceworker.js')
+    };
+    config = rewireWorkboxInject(workboxConfig)(config, env);
+  }
+  config = injectBabelPlugin(['import', { libraryName: 'antd', style: true }], config);
+  config = rewireLess.withLoaderOptions({
+    javascriptEnabled: true
+  })(config, env);
+  return config;
+};

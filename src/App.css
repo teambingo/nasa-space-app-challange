@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700');
+html,body,div,h1,h2,h3,h4,h5,h6 {
+  font-family: 'Roboto Mono', monospace!important;
+}
+body {
+overflow-x: hidden;
+}
+::-moz-selection { /* Code for Firefox */
+  color: black;
+  background: yellow;
+}
+
+::selection {
+  color: black;
+  background: yellow;
+}
+.ant-collapse-header {
+  font-family: var(--main-font) !important;
+}
+.ant-time-picker {
+  width: inherit;
+}
+.centered-text-link {
+  width: 100vw;
+  text-align: center;
+  margin-top: 2vh;
+  cursor: pointer;
+  color: var(--main-comp-color);
+}
+form .ant-select,
+form .ant-cascader-picker,.ant-popover-inner-content {
+  /* background: var(--main-bg-color)!important; */
+  font-family: var(--main-font);
+}
+.ant-cascader-picker{
+  border-radius: 4px!important;
+  background: white!important;
+}
+.ant-cascader-input.ant-input {
+  box-shadow: rgba(136, 122, 122, 0.24) 3px 4px 20px 0px!important;
+  background: white!important;
+}
+.ant-progress-inner, .ant-progress-bg {
+  height: 1rem!important;
+}
+input.ant-input,input.ant-time-picker-input {
+  font-family: var(--main-font);
+  box-shadow: var(--main-shadow);
+}
+input {
+  border: transparent!important;
+}
+.ant-radio-group label {
+  box-shadow: none!important;
+}
+.nasa-container-window{
+  min-height: 100vh;
+  display: grid;
+  /* background: pink; */
+}
+.nasa-jumbo{
+  max-width:60vw;
+  justify-self: center;
+  margin:2rem;
+  height: 10vh;
+  /* background: #eee; */
+
+}
+.nasa-container-window h1{
+  font-size: 3rem;
+  color: #1890ff; 
+  text-align: center;
+  font-weight: bold;
+}
+
+.nasa-jumbo p {
+  font-size: 1.3rem;
+  margin:1.3rem;
+  text-align: justify;
+}
+.nasa-chip{
+  background: rgb(243, 80, 80);
+  color:white;
+  width:fit-content;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  margin:0.4em;
+}
+.land {
+  background: rgb(139, 86, 7);
+}
+.ant-confirm-content {
+  margin:0!important;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+.nasa-stats {
+  /* background: red; */
+  font-size: 1.2rem;
+  width: 100vw;
+  margin:0;
+}
+.nasa-stats-number {
+  font-size: 4rem;
+  margin-left: 4rem;
+  color: #1890ff; 
+}
+.nasa-stats-banner {
+  font-size: 2rem;
+}
